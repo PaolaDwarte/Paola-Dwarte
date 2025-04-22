@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Outfit:wght@300;500;700&family=Special+Gothic+Expanded+One&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 1001;
+}
+
+.logo {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+  font-size: 1.8rem;
+  color: #000; /* base, overridden per page */
+}
+
+/* Logo colors per page */
+.page-ropa .logo { color: #6F4E37; }
+.page-bolsos .logo { color: #00BFFF; }
+.page-accesorios .logo { color: #FFA500; }
+.page-colaboraciones .logo { color: #2ecc71; }
+.page-especiales .logo { color: #8E4585; }
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  background-color: #2ecc71;
+  padding: 2rem;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.nav-menu.show {
+  animation: slideIn 0.3s ease-out forwards;
+  display: block;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  margin-bottom: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+
+.nav-menu a.especiales-link {
+  color: #00BFFF;
+}
+
+.nav-menu a.colab-link {
+  color: #800020;
+}
+
+.extras {
+  margin-top: 2rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#searchBox {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 2rem;
+}
+
+#searchBox.show-search {
+  display: block;
+}
+
+#searchBox input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 200px;
+}
+
+.cart-section {
+  padding: 2rem;
+}
+
+.checkout-btn {
+  background-color: #FFA500;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.hero {
+  height: 60vh;
+  background-color: #eee;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text.special-title {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+  font-size: 60px;
+  color: #2ecc71;
+}
+
+.text-banner {
+  padding: 2rem;
+  text-align: center;
+}
+
+.blue-banner {
+  font-family: 'Oooh Baby', cursive;
+  font-size: 50px;
+  color: #007BFF;
+}
+
+.video-section .video-placeholder {
+  margin: 2rem auto;
+  width: 80%;
+  height: 400px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  color: #666;
+}
+
+.preview-grid {
+  margin-top: -80px; /* overlapping */
+  padding: 2rem;
+  position: relative;
+  z-index: 900;
+  overflow-x: auto;
+  display: flex;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.preview-grid .item.placeholder {
+  min-width: 300px;
+  background: #ddd;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  color: #666;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.preview-grid .item.placeholder:hover {
+  transform: translateY(-5px);
+}
+
+.category-section {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.item.placeholder {
+  background: #ddd;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.item.placeholder:hover {
+  transform: translateY(-5px);
+}
+
+.sobre {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.sobre-title {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+  font-size: 60px;
+  color: #000;
+}
+
+.sobre-text {
+  font-family: 'Oooh Baby', cursive;
+  font-size: 50px;
+  color: #007BFF;
+  margin-bottom: 1rem;
+}
+
+.artistic-footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
