@@ -1,90 +1,155 @@
-<html>
-        <head><title>Downloaded HTML</title></head>
-        <body>
-            <pre style="white-space: pre-wrap; word-wrap: break-word;">/* Estilo básico para todo el sitio */
+/* Fuente principal */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
 }
 
-header {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Estilo de los títulos */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #00bfff; /* Azul eléctrico */
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #333;
+/* Barra de navegación */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
 }
 
-header p {
-    color: #666;
-    font-size: 1.1em;
-}
-
-section {
-    padding: 40px 20px;
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     text-align: center;
 }
 
-h2 {
-    font-size: 2em;
-    color: #333;
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+    text-align: center;
+    background: url('https://via.placeholder.com/1200x500/FFB6C1/000000?text=Editorial+Imagen') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 20px;
+}
+
+.bienvenida h1 {
+    font-size: 4em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #00bfff;
     margin-bottom: 20px;
 }
 
-/* Productos */
-.productos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.bienvenida p {
+    font-size: 1.5em;
 }
 
-.producto {
-    background-color: #fff;
+/* Estilo de la imagen editorial */
+.editorial-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Sección de vista previa de productos */
+.vista-previa {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.producto-previo {
     width: 250px;
     text-align: center;
 }
 
-.producto img {
+.producto-img {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.producto .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.producto-previo p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
     margin-top: 10px;
 }
 
-.producto .btn:hover {
-    background-color: #444;
-}
-
-/* Contacto */
-.contacto a {
-    color: #333;
-    text-decoration: none;
-}
-
-footer {
-    background-color: #333;
+/* Estilo para la sección About */
+.about {
+    background: url('https://via.placeholder.com/1200x500/FFFF00/000000?text=Sobre+Paola+Dwarte') no-repeat center center;
+    background-size: cover;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
-}</pre>
-        </body>
-    </html>
+    margin-top: 60px;
+}
+
+.about h2 {
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #00bfff; /* Azul eléctrico */
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Estilo de la imagen de About */
+.about-img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Sección de contacto */
+.contact {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact .btn {
+    background-color: #00bfff; /* Azul eléctrico */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.contact .btn:hover {
+    background-color: #008bbf; /* Azul más oscuro */
+}
