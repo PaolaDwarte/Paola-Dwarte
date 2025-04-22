@@ -4,62 +4,91 @@
             <pre style="white-space: pre-wrap; word-wrap: break-word;"><!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paola Dwarte - Tienda Online</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paola Dwarte</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Barra de navegación -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#categories">Categorías</a></li>
-            <li><a href="#about">Sobre Paola Dwarte</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
+  <header class="main-header">
+    <h1 class="logo">Paola <span>Dwarte</span></h1>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="menu" class="nav-menu">
+      <ul>
+        <li><a href="#ropa">Ropa</a></li>
+        <li><a href="#bolsos">Bolsos</a></li>
+        <li><a href="#colaboraciones">Colaboraciones</a></li>
+        <li><a href="#especiales">Producciones Especiales</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Sección de Bienvenida -->
-    <section id="home" class="bienvenida">
-        <h1>Bienvenida a Paola Dwarte</h1>
-        <p>Diseños únicos creados con amor y estilo. ¡Explora nuestras colecciones!</p>
-        <img src="https://via.placeholder.com/1200x500/FFB6C1/000000?text=Editorial+Imagen" alt="Imagen editorial" class="editorial-img">
-    </section>
+  <section class="hero">
+    <img src="img/editorial1.jpg" alt="Moda Editorial">
+    <div class="hero-text">
+      <h2>Creaciones únicas</h2>
+      <p>Diseños originales, piezas exclusivas, identidad sin repetición.</p>
+    </div>
+  </section>
 
-    <!-- Vista previa de productos -->
-    <section id="categories" class="vista-previa">
-        <h2>Productos Destacados</h2>
-        <div class="producto-previo">
-            <img src="https://via.placeholder.com/300/0000FF/808080?text=Bolso+de+Cuero" alt="Bolso de cuero" class="producto-img">
-            <p>Bolso de Cuero</p>
-            <a href="https://linkpagos.getnet.com" class="btn">Ver más</a>
-        </div>
-        <div class="producto-previo">
-            <img src="https://via.placeholder.com/300/0000FF/808080?text=Billetera" alt="Billetera de cuero" class="producto-img">
-            <p>Billetera de Cuero</p>
-            <a href="https://linkpagos.getnet.com" class="btn">Ver más</a>
-        </div>
-    </section>
+  <section class="productos" id="ropa">
+    <h2>Ropa</h2>
+    <div class="grid">
+      <div class="item">
+        <img src="img/ropa1.jpg" alt="Prenda">
+        <p>Prenda Única $45.000</p>
+      </div>
+      <!-- Más productos -->
+    </div>
+  </section>
 
-    <!-- Sección About Paola Dwarte -->
-    <section id="about" class="about">
-        <h2>Sobre Paola Dwarte</h2>
-        <p>"No hay categoría ni producción en serie, solo piezas únicas. El diseño original nació en Chile y el lazo es permanente, pero hace un tiempo comparte vínculo con Buenos Aires."</p>
-        <p>Producción conjunta con Joyce Duarte, quien diseña y produce a mano piezas únicas de cuero.</p>
-        <img src="https://via.placeholder.com/1200x400/FFFF00/000000?text=Sobre+Paola+Dwarte" alt="Sobre Paola Dwarte" class="about-img">
-    </section>
+  <section class="productos" id="bolsos">
+    <h2>Bolsos</h2>
+    <div class="grid">
+      <div class="item">
+        <img src="img/bolso1.jpg" alt="Bolso">
+        <p>Bolso de Cuero $38.000</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Sección de Contacto -->
-    <section id="contact" class="contact">
-        <h2>Contáctanos</h2>
-        <p>¿Tienes preguntas? No dudes en ponerte en contacto con nosotros:</p>
-        <a href="https://wa.me/5491165362352" class="btn">WhatsApp</a>
-        <a href="https://www.instagram.com/paoladwarte?igsh=bzhzZDNnZGc1NWdi" class="btn">Instagram</a>
-    </section>
+  <section class="productos" id="colaboraciones">
+    <h2>Colaboraciones</h2>
+    <p>Próximamente nuevas colaboraciones con diseñadores de Argentina, Asia y más.</p>
+  </section>
 
+  <section class="productos" id="especiales">
+    <h2>Producciones Especiales</h2>
+    <p>Colecciones cápsula seleccionadas y colaborativas.</p>
+  </section>
+
+  <section class="sobre" id="about">
+    <h2>Sobre Paola Dwarte</h2>
+    <p>"No hay categoría ni producción en serie, solo piezas únicas. El diseño original nació en Chile y el lazo es permanente, pero hace un tiempo comparte vínculo con Buenos Aires."</p>
+    <p>Producción conjunta con Joyce Duarte, quien diseña y produce a mano piezas únicas de cuero.</p>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Contacto</h2>
+    <p><a href="https://wa.me/5491165362352" target="_blank">WhatsApp</a></p>
+    <p><a href="https://www.instagram.com/paoladwarte?igsh=bzhzZDNnZGc1NWdi" target="_blank">Instagram</a></p>
+    <p>Email: paola@dwarte.com</p>
+  </section>
+
+  <footer class="artistic-footer">
+    <img src="img/artistic-detail.jpg" alt="Arte final">
+    <p>&copy; 2025 Paola Dwarte</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
 </body>
 </html></pre>
         </body>
