@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Paola Dwarte - Moda única desde Chile y Buenos Aires. Diseños originales y colaboraciones artísticas."/>
+  <title>Paola Dwarte</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="main-header">
+    <div class="logo"><span>Paola</span> Dwarte</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="#ropa">Ropa</a></li>
+        <li><a href="#bolsos">Bolsos</a></li>
+        <li><a href="#colaboraciones">Colaboraciones</a></li>
+        <li><a href="#especiales">Producciones especiales</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Imagen principal tipo editorial -->
+  <section class="hero">
+    <!-- Aquí va la imagen principal hero con modelo caminando -->
+    <!-- <img src="img/hero.jpg" alt="Modelo en ciudad representando la esencia de la marca"> -->
+    <div class="hero-text">No hay categoría, solo piezas únicas</div>
+  </section>
+
+  <!-- Ropa -->
+  <section id="ropa">
+    <h2>Ropa</h2>
+    <div class="grid productos">
+      <!-- Agrega aquí las imágenes de productos de ropa -->
+      <!-- <div class="item"><img src="img/ropa1.jpg" alt="Descripción"><p>Descripción corta</p></div> -->
+    </div>
+  </section>
+
+  <!-- Bolsos -->
+  <section id="bolsos">
+    <h2>Bolsos de cuero</h2>
+    <div class="grid productos">
+      <!-- Agrega aquí las imágenes de bolsos -->
+    </div>
+  </section>
+
+  <!-- Colaboraciones -->
+  <section id="colaboraciones">
+    <h2>Colaboraciones</h2>
+    <div class="grid productos">
+      <!-- Aquí puedes mostrar cápsulas con otras tiendas, zapatos, tejidos, etc. -->
+    </div>
+  </section>
+
+  <!-- Producciones Especiales -->
+  <section id="especiales">
+    <h2>Producciones especiales</h2>
+    <div class="grid productos">
+      <!-- Imágenes de proyectos destacados, editoriales o piezas únicas -->
+    </div>
+  </section>
+
+  <!-- Sobre y contacto -->
+  <section class="sobre" id="contacto">
+    <h2>Sobre el proyecto</h2>
+    <p>No hay categoría ni producción en serie, solo piezas únicas. El diseño original nació en Chile y el lazo es permanente, pero hace un tiempo comparte vínculo con Buenos Aires.</p>
+    <p>Producción conjunta con Joyce Duarte, quien diseña y produce a mano piezas únicas de cuero.</p>
+    <p>Contacto: <a href="mailto:paordj@icloud.com">paordj@icloud.com</a> | Instagram: @paoladwarte | WhatsApp</p>
+  </section>
+
+  <!-- Cierre visual artístico -->
+  <footer class="artistic-footer">
+    <!-- Aquí puedes poner una imagen artística o ilustración para cerrar -->
+    <!-- <img src="img/arte_final.jpg" alt="Arte final"> -->
+    <p>Paola Dwarte - Estilo desde el origen</p>
+  </footer>
+
+  <!-- JS para menú -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
