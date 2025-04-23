@@ -1,0 +1,104 @@
+
+body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.main-title {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin: 80px auto;
+}
+
+.destacadas-title {
+  font-family: 'Funnel Display', cursive;
+  font-size: 23px;
+  color: black;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+.destacadas-title:hover {
+  color: #0ff;
+  text-shadow: 0 0 5px #f0f, 0 0 10px #0ff;
+}
+
+.sobre-title {
+  font-family: 'Lexend Exa', sans-serif;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.page-title {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 19px;
+  text-align: right;
+  padding: 10px 20px;
+}
+
+.frase-identidad {
+  font-family: 'Oooh Baby', cursive;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.bandera {
+  display: inline-block;
+  animation: flamear 1s infinite alternate;
+  font-size: 15px;
+}
+
+@keyframes flamear {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(10deg); }
+}
+
+.descripcion {
+  font-weight: 300;
+  font-size: 15px;
+  padding: 10px 0;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.carousel .item {
+  min-width: 45%;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  animation: slide 4s infinite;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Botones de contacto */
+.contact-btn {
+  width: 23px;
+  height: 23px;
+  background-color: #bfff00;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Animación de planeta girando como planeta */
+.planet {
+  width: 15px;
+  height: 15px;
+  background: url('img/planet.png') no-repeat center/cover;
+  animation: girarPlaneta 4s linear infinite;
+}
+
+@keyframes girarPlaneta {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
