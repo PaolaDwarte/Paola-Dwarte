@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paola Dwarte</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Lexend+Exa&family=Oooh+Baby&family=Outfit&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -17,7 +17,7 @@
     </div>
   </header>
 
-  <nav class="hidden-menu">
+  <nav class="hidden-menu" id="hidden-menu">
     <ul>
       <li><a href="ropa.html">Ropa</a></li>
       <li><a href="bolsos.html">Bolsos</a></li>
@@ -27,8 +27,6 @@
       <li><a href="contact.html">Contacto</a></li>
     </ul>
   </nav>
-
-  <h1 class="titulo-principal">Paola Dwarte</h1>
 
   <section class="destacadas-titulo">Destacadas</section>
   <section class="destacadas-slider">
@@ -44,22 +42,25 @@
       No hay categoría ni producción en serie, solo piezas únicas. El diseño original nació en Chile y el lazo es permanente, pero hace un tiempo comparte vínculo con Buenos Aires, Argentina. 🇦🇷
     </p>
     <p class="joyce-info">
-      Producción conjunta con <a href="https://www.instagram.com/joyceduartestudio?igsh=YTlrNzYyOWoxdnBp" target="_blank"><strong>Joyce Duarte</strong></a>, quien diseña y produce a mano piezas únicas de cuero. 🪡
+      Producción conjunta con <a href="https://www.instagram.com/joyceduartestudio?igsh=YTlrNzYyOWoxdnBp" target="_blank">Joyce Duarte</a>, quien diseña y produce a mano piezas únicas de cuero.
     </p>
     <div class="contact-buttons">
-      <a href="https://www.instagram.com/paola.dwarte" target="_blank" class="btn insta">Instagram</a>
-      <a href="https://wa.me/1234567890" target="_blank" class="btn whatsapp">WhatsApp</a>
+      <a href="https://www.instagram.com/paoladwarte" class="btn insta" target="_blank">Instagram</a>
+      <a href="https://wa.me/123456789" class="btn whatsapp" target="_blank">WhatsApp</a>
     </div>
   </section>
 
   <footer>
-    <p class="footer-text">
-      Paola Dwarte Desde 2025 | Envíos a todo el mundo
-      <span class="planet-animation">🌍</span>
-    </p>
+    <p class="footer-text">Envíos a todo el mundo <span class="planet-animation">🌍</span></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const hiddenMenu = document.getElementById('hidden-menu');
+
+    menuToggle.addEventListener('click', () => {
+      hiddenMenu.style.display = hiddenMenu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
 </body>
 </html>
-    
