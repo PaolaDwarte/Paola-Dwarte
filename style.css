@@ -1,5 +1,5 @@
 <html>
-        <head><title>Downloaded HTML</title></head>
+        <head><title>Downloaded HTML</title><link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet"></head>
         <body>
             <pre style="white-space: pre-wrap; word-wrap: break-word;">body {
   font-family: 'Inter', sans-serif;
@@ -135,5 +135,11 @@ footer {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }</pre>
+.titulo-principal {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 30vh;
+}
         </body>
     </html>
