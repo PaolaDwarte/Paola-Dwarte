@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paola Dwarte</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="top-nav" id="topNav">
+    <div id="menuIcon" class="icon">☰</div>
+    <div id="searchIcon" class="icon">🔍</div>
+    <div id="cartIcon" class="icon">🛒</div>
+  </nav>
+</header>
+
+<aside id="menu" class="hidden-menu">
+  <ul>
+    <li><a href="#ropa">Ropa</a></li>
+    <li><a href="#bolsos">Bolsos</a></li>
+    <li><a href="#accesorios">Accesorios</a></li>
+    <li><a href="#colaboraciones">Colaboraciones</a></li>
+    <li><a href="#producciones">Producciones especiales</a></li>
+  </ul>
+</aside>
+
+<aside id="cart-panel" class="hidden-menu" style="width: 300px; right: -300px;">
+  <h3>Tu carrito</h3>
+  <ul id="cart-items"></ul>
+</aside>
+
+<main>
+  <section id="destacadas" class="destacadas">
+    <h2 class="dest-title">Destacadas</h2>
+    <div class="carousel-controls">
+      <button id="prevBtn">&#10094;</button>
+      <button id="nextBtn">&#10095;</button>
+    </div>
+    <div id="carousel" class="carousel">
+      <!-- Ejemplo de producto -->
+      <div class="product" data-name="Producto 1">
+        <div class="product-image">Producto 1</div>
+        <div class="product-info">
+          <span class="product-title">Producto 1</span><br>
+          <span class="product-price">$100</span>
+        </div>
+        <button class="add-to-cart">🛒</button>
+      </div>
+      <!-- Repetir para cada producto -->
+      <div class="product" data-name="Producto 2">
+        <div class="product-image">Producto 2</div>
+        <div class="product-info">
+          <span class="product-title">Producto 2</span><br>
+          <span class="product-price">$120</span>
+        </div>
+        <button class="add-to-cart">🛒</button>
+      </div>
+      <!-- Agrega hasta completar 6 o 8 -->
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
