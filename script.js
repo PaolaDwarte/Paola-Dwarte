@@ -1,4 +1,3 @@
-
 const menu = document.getElementById('menu');
 const menuIcon = document.getElementById('menuIcon');
 const topNav = document.getElementById('topNav');
@@ -10,13 +9,11 @@ const nextBtn = document.getElementById('nextBtn');
 
 let searchField = null;
 
-// Menú desplegable
 menuIcon.addEventListener('click', (e) => {
   e.stopPropagation();
   menu.style.right = menu.style.right === '0px' ? '-40%' : '0px';
 });
 
-// Campo de búsqueda
 searchIcon.addEventListener('click', (e) => {
   e.stopPropagation();
   if (!searchField) {
@@ -38,7 +35,6 @@ searchIcon.addEventListener('click', (e) => {
   }
 });
 
-// Cerrar menú o campo de búsqueda si se hace clic fuera
 document.addEventListener('click', (e) => {
   if (menu.style.right === '0px' && !menu.contains(e.target) && e.target !== menuIcon) {
     menu.style.right = '-40%';
@@ -55,7 +51,6 @@ window.addEventListener('scroll', () => {
   lastY = window.scrollY;
 });
 
-// Carousel auto scroll
 let pos = 0;
 function moveCarousel(amount) {
   pos += amount;
