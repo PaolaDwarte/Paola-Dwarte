@@ -70,12 +70,13 @@ nextBtn.addEventListener('click', () => moveCarousel(carousel.offsetWidth * 0.33
 
 // — NPC: mantené TODO lo que ya tienes arriba (menú, buscador, carrusel)… luego pega esto al final —
 
+// — Cambios nuevos: tap/swipe para los sliders de imagen de los bolsos —
 document.querySelectorAll('.bolso-img').forEach(slider => {
   const images = slider.querySelectorAll('img');
-  if (images.length < 2) return;    // si solo hay una imagen, salimos
+  if (images.length < 2) return;  // Solo si hay más de una imagen
 
   let current = 0;
-  // Inicializamos opacidades
+  // Inicializa opacidades y transición
   images.forEach((img, i) => {
     img.style.opacity = i === 0 ? '1' : '0';
     img.style.transition = 'opacity 0.4s ease-in-out';
@@ -88,7 +89,7 @@ document.querySelectorAll('.bolso-img').forEach(slider => {
     images[current].style.opacity = '1';
   });
 
-  // Swipe (deslizar) para alternar imagen
+  // Swipe (touch) para alternar imagen
   let startX = 0;
   slider.addEventListener('touchstart', e => {
     startX = e.touches[0].clientX;
