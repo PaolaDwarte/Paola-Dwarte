@@ -69,126 +69,87 @@ footer { text-align:center; padding:20px; }
 .planet { display:inline-block; font-size:45px; animation:planetRotate 15s infinite linear; }
 @keyframes planetRotate {0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
 
-/* ——————————————
-   SECCIÓN BOLSOS
-   —————————————— */
 
-#bolsos {
-  padding: 60px 20px;
-  font-family: 'Lexend Exa', sans-serif;
-  font-size: 24px;
-  text-align: center;
-  background-color: #fafafa;
-}
+/* ---- BOLSOS / TIENDA ---- */
 
-#bolsos h2 {
+.section-title {
+  font-family: 'Lexend Exa';
   font-size: 28px;
-  margin-bottom: 40px;
   text-align: left;
+  margin-bottom: 30px;
   padding-left: 10px;
 }
 
-/* Contenedor de todas las tarjetas */
-.bolso {
-  max-width: 400px;
-  margin: 40px auto;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
-  transition: transform 0.3s ease;
+.grid-bolsos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
 }
-.bolso:hover {
+
+.bolso-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.bolso-card:hover {
   transform: scale(1.02);
 }
 
-/* Galería de imágenes */
-.img-slider {
-  position: relative;
-  width: 100%;
-  padding-top: 75%; /* Proporción 4:3 */
-  overflow: hidden;
-}
-.img-slider img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.4s ease-in-out;
-}
-.img-slider img:first-child {
-  opacity: 1;
-  z-index: 1;
-}
-.img-slider img:nth-child(2) {
-  opacity: 0;
-  z-index: 2;
-}
-.img-slider:hover img:first-child {
-  opacity: 0;
-}
-.img-slider:hover img:nth-child(2) {
-  opacity: 1;
+.bolso-img {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  scroll-behavior: smooth;
+  margin-bottom: 15px;
 }
 
-/* Contenido del bolso */
-.bolso h3 {
-  font-family: 'Lexend Exa', sans-serif;
+.bolso-img img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.bolso-card h3 {
   font-size: 18px;
-  margin: 15px 20px 5px;
-  text-align: left;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Outfit';
 }
+
 .precio {
+  font-size: 16px;
   font-weight: bold;
-  font-size: 15px;
-  margin: 5px 20px;
-  text-align: left;
+  margin-bottom: 10px;
 }
+
 .descripcion {
-  font-family: 'Outfit', sans-serif;
   font-size: 14px;
-  font-weight: 300;
   line-height: 1.5;
-  color: #444;
-  margin: 10px 20px 15px;
-  text-align: left;
+  color: #333;
+  font-family: 'Outfit';
+  margin-bottom: 15px;
 }
 
-/* Botón de comprar */
 .comprar {
-  display: block;
-  background-color: black;
-  color: white;
-  border: none;
-  font-family: 'Outfit', sans-serif;
-  font-size: 15px;
-  padding: 10px 0;
-  margin: 0 20px 20px;
-  border-radius: 5px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  font-family: 'Outfit';
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: calc(100% - 40px);
-}
-.comprar:hover {
-  background-color: #333;
+  transition: all 0.3s;
 }
 
-/* Responsive para móviles */
-@media screen and (max-width: 600px) {
-  #bolsos h2 {
-    font-size: 24px;
-  }
-  .bolso {
-    margin: 30px auto;
-  }
-  .bolso h3 {
-    font-size: 16px;
-  }
-  .precio, .descripcion {
-    font-size: 13px;
-  }
-  .comprar {
-    font-size: 14px;
-  }
+.comprar:hover {
+  background: #000;
+  color: #fff;
 }
+
