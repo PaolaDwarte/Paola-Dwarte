@@ -67,3 +67,33 @@ function moveCarousel(amount) {
 setInterval(() => moveCarousel(carousel.offsetWidth * 0.33), 2000);
 prevBtn.addEventListener('click', () => moveCarousel(-carousel.offsetWidth * 0.33));
 nextBtn.addEventListener('click', () => moveCarousel(carousel.offsetWidth * 0.33));
+
+// Cambio de imagen en celular al tocar
+document.querySelectorAll('.img-slider').forEach(slider => {
+  let current = 0;
+  const images = slider.querySelectorAll('img');
+
+  if (images.length < 2) return;
+
+  // Al hacer click (toque)
+  slider.addEventListener('click', () => {
+    images[current].style.opacity = 0;
+    current = (current + 1) % images.length;
+    images[current].style.opacity = 1;
+  });
+
+  // Swipe (deslizar)
+  let startX = 0;
+  slider.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+    if (Math.abs(endX - startX) > 50) {
+      images[current].style.opacity = 0;
+      current = (current + 1) % images.length;
+      images[current].style.opacity = 1;
+    }
+  });
+});
