@@ -103,3 +103,24 @@ document.querySelectorAll('.bolso-img').forEach(slider => {
     }
   });
 });
+
+// — Cambio aleatorio de color para el título Destacadas —
+(function() {
+  const destTitle = document.querySelector('.dest-title');
+  if (!destTitle) return;
+
+  // genera un color hexadecimal aleatorio
+  function randomColor() {
+    return '#'+Math.floor(Math.random()*0xFFFFFF).toString(16).padStart(6,'0');
+  }
+
+  // aplica un nuevo color cada vez
+  function tick() {
+    destTitle.style.color = randomColor();
+  }
+
+  // Al cargar por primera vez y luego cada 2s (igual que tu carrusel)
+  tick();
+  setInterval(tick, 2000);
+})();
+
