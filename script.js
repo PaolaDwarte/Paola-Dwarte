@@ -124,3 +124,54 @@ document.querySelectorAll('.bolso-img').forEach(slider => {
   setInterval(tick, 2000);
 })();
 
+
+document.querySelectorAll('.bolso-img').forEach(slider => {
+  const images = slider.querySelectorAll('img');
+  if (images.length < 2) return;
+  let current = 0;
+
+  // inicializa opacidad
+  images.forEach((img,i) => {
+    img.style.opacity = i===0 ? '1' : '0';
+    img.style.position = 'absolute';
+    img.style.top = '0';
+    img.style.left = '0';
+    img.style.width = '100%';
+    img.style.height = 'auto';
+  });
+
+  // pulsa flecha “next”
+  const nextBtn = slider.querySelector('.slider-arrow.next');
+  nextBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    images[current].style.opacity = '0';
+    current = (current + 1) % images.length;
+    images[current].style.opacity = '1';
+  });
+
+  // swipe / tap ya lo tienes, mantenlo…
+
+  // doble-tap / dblclick para zoom
+  slider.addEventListener('dblclick', e => {
+    const rect = images[current].getBoundingClientRect();
+    const x = (e.clientX - rect.left)/rect.width*100;
+    const y = (e.clientY - rect.top)/rect.height*100;
+    slider.classList.toggle('zoomed');
+    images[current].style.transformOrigin = `${x}% ${y}%`;
+  });
+
+  // hover + movimiento de ratón para cambiar el centro del zoom
+  slider.addEventListener('mousemove', e => {
+    if (!slider.classList.contains('zoomed')) return;
+    const img = images[current];
+    const rect = img.getBoundingClientRect();
+    const x = (e.clientX - rect.left)/rect.width*100;
+    const y = (e.clientY - rect.top)/rect.height*100;
+    img.style.transformOrigin = `${x}% ${y}%`;
+  });
+  slider.addEventListener('mouseleave', () => {
+    // al salir, desactiva zoom
+    slider.classList.remove('zoomed');
+  });
+});
+
