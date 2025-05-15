@@ -22,10 +22,12 @@ body { font-family:'Outfit', sans-serif; }
 .hero { height:400px; display:flex; align-items:center; justify-content:center; }
 .hero-title { font-family:'Special Gothic Expanded One'; font-size:40px; }
 
-.destacadas { padding:100px 20px; position:relative; }
-.dest-title {
-  font-family:'Funnel Display'; font-size:23px; position:absolute; left:20px; top:100px;
-  animation:colChange 10s infinite;
+/* — Solo para la versión grid: situar estático en el flujo normal — */
+.destacadas-grid .dest-title {
+  position: static !important;
+  margin-bottom: 30px;
+  /* el resto de tus estilos ya están bien */
+
 }
 @keyframes colChange {0%{color:black;}50%{color:#0000ff;}100%{color:black;}}
 
