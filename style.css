@@ -27,20 +27,30 @@ body { font-family:'Outfit', sans-serif; }
 @keyframes colChange {0%{color:black;}50%{color:#0000ff;}100%{color:black;}}
 
 /* — Solo para la versión grid: situar estático en el flujo normal — */
-.destacadas-grid .dest-title {
-  position: static !important;
-  margin-bottom: 30px;
-  /* resto de estilos… */
-}
-
-/* ---- GRID DESTACADAS ---- */
+/* — Destacadas estilo Desigual — */
 .destacadas-grid {
-  padding: 100px 20px;
+  padding: 80px 20px;
+}
+.destacadas-grid .dest-title {
+  position: static;      /* para que esté en el flujo normal */
+  font-family: 'Funnel Display';
+  font-size: 23px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 .grid-destacadas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.dest-card {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+.dest-card:hover {
+  transform: translateY(-5px);
 }
 .dest-card img {
   width: 100%;
@@ -48,6 +58,7 @@ body { font-family:'Outfit', sans-serif; }
   display: block;
   object-fit: cover;
 }
+/* color aleatorio cada 2s (usa tu script) */
 
 
 
