@@ -187,3 +187,38 @@ footer { text-align:center; padding:20px; }
   color: #fff;
 }
 
+/* flecha minimalista */
+.bolso-img {
+  position: relative;
+}
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 10;
+  transition: background .2s;
+}
+.slider-arrow:hover {
+  background: rgba(255,255,255,0.9);
+}
+
+/* zoom en desktop al pasar el mouse y en mobile al hacer doble-tap */
+.bolso-img img {
+  transition: transform .2s ease-in-out;
+  cursor: zoom-in;
+}
+.bolso-img.zoomed img {
+  transform: scale(2);
+  cursor: zoom-out;
+  /* transform-origin se ajustará desde JS */
+}
+
+
