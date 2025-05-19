@@ -23,7 +23,6 @@ body { font-family:'Outfit', sans-serif; }
 .hero-title { font-family:'Special Gothic Expanded One'; font-size:40px; }
 
 
-}
 @keyframes colChange {0%{color:black;}50%{color:#0000ff;}100%{color:black;}}
 
 /* — Solo para la versión grid: situar estático en el flujo normal — */
@@ -187,17 +186,16 @@ footer { text-align:center; padding:20px; }
   color: #fff;
 }
 
-/* —— Slider de bolsos: sólo arrow, sin scroll bar —— */
+/* ---- BOLSOS / SLIDER CON FLECHA Y ZOOM ---- */
 .bolso-img {
   position: relative;
-  overflow: hidden;      /* oculta la barra de scroll fea */
+  overflow: hidden;         /* oculta scrollbar */
   width: 100%;
   height: auto;
 }
 .bolso-img img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   opacity: 0;
   transition: opacity 0.4s ease-in-out, transform 0.2s ease;
@@ -206,7 +204,6 @@ footer { text-align:center; padding:20px; }
 .bolso-img img:first-child {
   opacity: 1;
 }
-
 /* arrow minimalista */
 .slider-arrow {
   position: absolute;
@@ -222,15 +219,9 @@ footer { text-align:center; padding:20px; }
   z-index: 10;
 }
 
-/* zoom en desktop al pasar el mouse y en mobile al hacer doble-tap */
-.bolso-img img {
-  transition: transform .2s ease-in-out;
-  cursor: zoom-in;
-}
+/* zoom en desktop y móvil */
 .bolso-img.zoomed img {
   transform: scale(2);
   cursor: zoom-out;
-  /* transform-origin se ajustará desde JS */
+  /* transform-origin ajustado vía JS */
 }
-
-
