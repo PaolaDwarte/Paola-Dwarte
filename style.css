@@ -187,10 +187,27 @@ footer { text-align:center; padding:20px; }
   color: #fff;
 }
 
-/* flecha minimalista */
+/* —— Slider de bolsos: sólo arrow, sin scroll bar —— */
 .bolso-img {
   position: relative;
+  overflow: hidden;      /* oculta la barra de scroll fea */
+  width: 100%;
+  height: auto;
 }
+.bolso-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.2s ease;
+  cursor: zoom-in;
+}
+.bolso-img img:first-child {
+  opacity: 1;
+}
+
+/* arrow minimalista */
 .slider-arrow {
   position: absolute;
   top: 50%;
@@ -199,15 +216,10 @@ footer { text-align:center; padding:20px; }
   background: rgba(255,255,255,0.7);
   border: none;
   font-size: 24px;
-  line-height: 1;
   padding: 4px 8px;
   cursor: pointer;
   border-radius: 4px;
   z-index: 10;
-  transition: background .2s;
-}
-.slider-arrow:hover {
-  background: rgba(255,255,255,0.9);
 }
 
 /* zoom en desktop al pasar el mouse y en mobile al hacer doble-tap */
